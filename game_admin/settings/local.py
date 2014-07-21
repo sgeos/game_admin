@@ -70,7 +70,7 @@ DEVSERVER_MODULES = (
     'devserver.modules.profile.LineProfilerModule',
 )
 
-TEMPLATE_STRING_IF_INVALID = "BAD TEMPLATE VARIABLE"
+TEMPLATE_STRING_IF_INVALID = ""
 SECRET_KEY = "&)y$vgj8lzxlexal31dcd(^ua(0yf95)f^b@$=*to5s)*eznxq"
 
 STRIPE_PUBLIC_KEY = ""
