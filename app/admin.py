@@ -5,10 +5,20 @@ import reversion
 
 
 class UnitStatInline(admin.TabularInline):
+    fieldsets = (
+        (None, {
+            'fields': (('unit', 'stat', 'value'),)
+        }),
+    )
     model = UnitStat
     extra = 3
 
 class UnitDefenseInline(admin.TabularInline):
+    fieldsets = (
+        (None, {
+            'fields': (('unit', 'effect', 'value'),)
+        }),
+    )
     model = UnitDefense
     extra = 3
 
@@ -35,9 +45,19 @@ class EffectTypeAdmin(reversion.VersionAdmin):
     inlines = (UnitDefenseInline,)
 
 class UnitStatAdmin(reversion.VersionAdmin):
+    fieldsets = (
+        (None, {
+            'fields': (('unit', 'stat', 'value'),)
+        }),
+    )
     list_display = ('id', 'owner', 'name', 'value')
 
 class UnitDefenseAdmin(reversion.VersionAdmin):
+    fieldsets = (
+        (None, {
+            'fields': (('unit', 'effect', 'value'),)
+        }),
+    )
     list_display = ('id', 'owner', 'name', 'value')
 
 admin.site.register(Stat, StatAdmin)
